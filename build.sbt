@@ -13,8 +13,8 @@ gitCommitCountTask := {
   //0
   //}
 
-  val branch = scala.sys.process.Process("git symbolic-ref -q HEAD").lines.head.replace("refs/heads/","")
-  val commitCount = scala.sys.process.Process(s"git rev-list --count $branch").lines.head
+  val branch = scala.sys.process.Process("git symbolic-ref -q HEAD").lineStream.head.replace("refs/heads/","")
+  val commitCount = scala.sys.process.Process(s"git rev-list --count $branch").lineStream.head
   println(s"total number of commits on [$branch]: $commitCount")
   commitCount
 }
