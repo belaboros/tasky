@@ -2,13 +2,24 @@ Experimenting with SBT scala build tool.
 
 Based on https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md
 
-Use sbt commands:
+Suggested sbt commands:
  - sbt reload
  - sbt clean
  - sbt compile
+ - sbt test
  - sbt scalastyle
  - sbt run
  - sbt gitCommitCountTask
+ - dependencyTree
+
+
+
+View compile classpath depenmdencies
+To view compile classpath dependencies you can run the following task from inside the sbt shell. Task and its output is shown below:
+
+show compile:dependencyClasspath
+show test:dependencyClasspath
+
 
 
 
